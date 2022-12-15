@@ -1,38 +1,153 @@
-.App {
-  text-align: center;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+  margin: 0;
+  font: inherit;
+  font-family: "Montserrat", sans-serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.container {
+  width: 90%;
+  max-width: 608px;
+  margin: 2em auto 0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.flex {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 2.25rem;
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  line-height: 42px;
+  text-align: center;
+  color: #333333;
+  letter-spacing: 0.045em;
+
+  margin-bottom: 2.265rem;
+}
+
+hr {
+  border: 1px solid #bdbdbd;
+}
+
+.primary-navigation {
+  list-style: none;
+  margin: 0;
+  padding: 0 4em;
+}
+
+.primary-navigation > li .link {
+  font-size: 14px;
+  font-weight: 600;
+  color: #333333;
+  text-decoration: none;
+  color: inherit;
+}
+
+.underline-indicators > * {
+  padding: 1em 0.5em;
+  border-bottom: 0.25rem solid rgba(47, 128, 237, 0);
+}
+
+.underline-indicators > *:hover,
+.underline-indicators > *:focus {
+  border-color: #eaeaea;
+}
+
+.underline-indicators .active {
+  border-color: rgb(47, 128, 237, 1);
+}
+
+.form {
+  margin: 1.625em 0 2em;
+}
+
+.form input {
+  width: 78%;
+  padding: 1em;
+  outline: none;
+  border: 1px solid #bdbdbd;
+  border-radius: 12px;
+}
+
+.btnAdd {
+  width: 17%;
+  background: #2f80ed;
+  font-size: 14px;
+  font-weight: 600;
+  color: #ffffff;
+  border: none;
+  outline: none;
+  border-radius: 12px;
+
+  cursor: pointer;
+}
+
+.btnAdd:hover,
+.btn:focus {
+  background: rgb(14, 92, 195);
+}
+
+/* list item */
+.list-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.list-item + .list-item {
+  margin-top: 1.78em;
+}
+
+.list-item .left {
+  display: flex;
+  align-items: center;
+  gap: 0.75em;
+}
+
+.list-item .list-item__checkbox {
+  width: 1.25em;
+  height: 1.25em;
+  border: 1px solid #828282;
+}
+
+.list-item .list-item__text {
+  font-size: 1.0625em;
+  font-weight: 500;
+}
+
+.list-item .delete-icon {
+  color: #bdbdbd;
+  background-color: transparent;
+  border: none;
+  outline: none;
+
+  cursor: pointer;
+}
+
+.delete-all {
+  width: 124px;
+  height: 40px;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
+  gap: 0.28em;
 
-.App-link {
-  color: #61dafb;
-}
+  background-color: #eb5757;
+  color: #ffffff;
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  font-size: 12px;
+  font-weight: 600;
+  border: none;
+  outline: none;
+  border-radius: 4px;
+
+  cursor: pointer;
 }
